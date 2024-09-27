@@ -1,0 +1,167 @@
+.App {
+    display: grid;
+    height: 100dvh;
+    background: #333;
+    color: #ddd;
+    justify-content: center;
+}
+
+.Header,
+.Content,
+.Footer {
+    display: grid;
+    border: 1px solid red;
+    width: 90vw;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.Header {
+    align-self: flex-start;
+    height: 20dvh;
+}
+
+.Content {
+    align-self: center;
+    align-items: center;
+    height: 70dvh;
+    text-align: center;
+    gap: 1rem;
+    contain: content;
+}
+
+.Cards {
+    display: grid;
+    gap: 1rem;
+    overflow-y: auto;
+    height: 100%;
+    padding: 1rem;
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+    border: 1px solid red;
+    padding: 0.5rem;
+}
+
+.Card img {
+    width: 70%;
+    aspect-ratio: 1/1;
+}
+
+.card__buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Footer {
+    align-self: flex-end;
+    align-items: center;
+    height: 5dvh;
+}
+
+
+/* desktop */
+
+@media screen and (min-width: 1024px) {
+    .App {
+        display: grid;
+        justify-content: center;
+    }
+    .Header,
+    .Content,
+    .Footer {
+        width: 70vw;
+    }
+    .Header {
+        height: 10dvh;
+    }
+    .Content {
+        height: 80dvh;
+    }
+    .Cards {
+        display: grid;
+        gap: 1rem;
+        overflow-y: auto;
+        height: 100%;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .Card {
+        width: 10vw;
+        height: 10vh;
+        padding: 0.5rem;
+        font-size: 10px;
+        position: relative;
+        content: fit-content;
+        gap: 1rem;
+    }
+    .Card img {
+        width: 20%;
+        aspect-ratio: 1/1;
+        align-self: flex-start;
+        justify-self: start;
+    }
+    .card__text {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+        justify-self: flex-start;
+        position: absolute;
+    }
+    .Footer {
+        height: 10dvh;
+    }
+}
+
+
+/* tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .App {
+        display: grid;
+        justify-content: center;
+    }
+    .Header,
+    .Content,
+    .Footer {
+        width: 80vw;
+    }
+    .Header {
+        height: 10dvh;
+    }
+    .Content {
+        height: 80dvh;
+    }
+    .Cards {
+        display: grid;
+        gap: 1rem;
+        overflow-y: auto;
+        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .Card {
+        width: 20vw;
+        height: 20vh;
+        font-size: 10px;
+    }
+    .Footer {
+        height: 10dvh;
+    }
+}
